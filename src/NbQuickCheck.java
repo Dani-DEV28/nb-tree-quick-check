@@ -1,4 +1,4 @@
-import java.util.List;
+eimport java.util.List;
 import java.util.Map;
 
 public class NbQuickCheck {
@@ -10,7 +10,14 @@ public class NbQuickCheck {
    * @param tree the tree represented as a map of parent nodes to child lists
    * @param root the root node to start traversal from
    */
-  public static void preOrder(Map<Integer, List<Integer>> tree, int root) {
+  public static void preOrder(Map<Integer, List<Integer>> tree, int root) { //<- Need to review how to work with Maps
+    if(tree == null || root == -1) return; //Assuming it positive number
+
+    System.out.println(root);
+    root = tree.next.value;
+
+    preOrder(tree.next, root);
+
     if(!tree.containsKey(root)) {
       return;
     }
@@ -24,6 +31,8 @@ public class NbQuickCheck {
    * @return the minimum value in the tree or Integer.MAX_VALUE if root is null
    */
   public static int minVal(Node<Integer> root) {
+    //DFS
+
     return -1;
   }
   
