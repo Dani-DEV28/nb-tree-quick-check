@@ -12,7 +12,8 @@ public class NbQuickCheck {
    * @param root the root node to start traversal from
    */
   public static void preOrder(Map<Integer, List<Integer>> tree, int root) { //<- Need to review how to work with Maps
-    if(tree == null || root == -1) return; //Assuming it positive number
+    if(tree == null || !tree.containsKey(root)) return; //Assuming it positive number
+
 
     System.out.println(root);
 
