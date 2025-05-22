@@ -1,4 +1,5 @@
-eimport java.util.List;
+
+import java.util.List;
 import java.util.Map;
 
 public class NbQuickCheck {
@@ -14,12 +15,11 @@ public class NbQuickCheck {
     if(tree == null || root == -1) return; //Assuming it positive number
 
     System.out.println(root);
-    root = tree.next.value;
-
-    preOrder(tree.next, root);
 
     if(!tree.containsKey(root)) {
-      return;
+      for(int item : tree.get(root)){
+        preOrder(tree, item);
+      }
     }
   }
 
